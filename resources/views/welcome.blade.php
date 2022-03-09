@@ -16,7 +16,7 @@
     <body class="antialiased">
         
         <div id="app">
-            Helllo World
+            <Friends></Friends>
         </div>
         <script src="{{ asset('js/app.js') }}"></script>
     </body>
