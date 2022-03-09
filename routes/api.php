@@ -24,6 +24,7 @@ Route::get('getfriends',[FriendsController::class,'getFriends']);
 Route::get('users/{name}', function ($name) {
     $frnd=new Friend;
     $frnd->title=$name;
+    $frnd->alive=false;
     $frnd->save();
 });
 Route::put('changestate/{id}',[FriendsController::class,'changeState']);
