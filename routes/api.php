@@ -27,8 +27,9 @@ Route::get('users/{name}', function ($name) {
     $frnd->alive=false;
     $frnd->save();
 });
-Route::get('usersdelete/{name}', function ($id) {
+Route::get('usersdelete/{id}', function ($id) {
     $frnd=Friend::find($id);
-    $frnd->delete();
+    $frnd->name='test';
+    $frnd->save();
 });
 Route::put('changestate/{id}',[FriendsController::class,'changeState']);
