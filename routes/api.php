@@ -29,7 +29,7 @@ Route::get('users/{name}', function ($name) {
 });
 Route::get('usersdelete/{id}', function ($id) {
     $frnd=Friend::find($id);
-    $frnd->name='test';
+    $frnd->title='test';
     $frnd->save();
 });
 Route::put('changestate/{id}',[FriendsController::class,'changeState']);
